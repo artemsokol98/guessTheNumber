@@ -1,0 +1,17 @@
+/* 
+  Localizable.strings
+  guessTheNumber
+
+  Created by Артем Соколовский on 24.06.2021.
+  
+*/
+
+"Number of steps" = "Количество шагов";
+"Range" = "Диапазон";
+"Make a new number" = "Загадать новое число";
+"Error!" = "Ошибка!";
+"Few" = "Мало";
+"Many" = "Много";
+"Congrats!" = "Молодец!";
+"You're right" = "Ты угадал";
+"Random Number" = "Случайное число";

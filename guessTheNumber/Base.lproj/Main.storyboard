@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="UQZ-6E-IRS">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
@@ -8,40 +8,59 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Guess the number-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="guessTheNumber" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="MainViewController" customModule="guessTheNumber" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="26" translatesAutoresizingMaskIntoConstraints="NO" id="XYf-HG-IRO">
-                                <rect key="frame" x="132" y="84" width="150" height="146"/>
+                                <rect key="frame" x="107" y="128" width="200" height="295"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Введите число" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aKo-vj-Wuv">
-                                        <rect key="frame" x="0.0" y="0.0" width="150" height="34"/>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aKo-vj-Wuv">
+                                        <rect key="frame" x="0.0" y="0.0" width="200" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fTq-bP-Jws">
-                                        <rect key="frame" x="0.0" y="60" width="150" height="30"/>
-                                        <state key="normal" title="Проверить!"/>
+                                        <rect key="frame" x="0.0" y="60" width="200" height="30"/>
+                                        <state key="normal" title="Check!"/>
                                         <connections>
                                             <action selector="checkValueButton" destination="BYZ-38-t0r" eventType="touchUpInside" id="CoQ-9X-eyw"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CB9-1e-S4O">
-                                        <rect key="frame" x="36.5" y="116" width="77" height="30"/>
-                                        <state key="normal" title="Подсказка"/>
+                                        <rect key="frame" x="84" y="116" width="32" height="30"/>
+                                        <state key="normal" title="Help"/>
                                         <connections>
                                             <action selector="showRandomNumber" destination="BYZ-38-t0r" eventType="touchUpInside" id="YNJ-73-myA"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jQA-eV-gL3">
+                                        <rect key="frame" x="79.5" y="172" width="41.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dOX-t3-NmU">
+                                        <rect key="frame" x="79.5" y="218.5" width="41.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AMY-Yz-a0L">
+                                        <rect key="frame" x="28" y="265" width="144" height="30"/>
+                                        <state key="normal" title="New random number"/>
+                                        <connections>
+                                            <action selector="getNewRandomNumber" destination="BYZ-38-t0r" eventType="touchUpInside" id="JHc-hj-xGF"/>
                                         </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="aKo-vj-Wuv" firstAttribute="width" secondItem="XYf-HG-IRO" secondAttribute="width" id="DT4-WT-L7T"/>
-                                    <constraint firstAttribute="width" constant="150" id="c8J-lk-0Cr"/>
+                                    <constraint firstAttribute="width" constant="200" id="c8J-lk-0Cr"/>
                                     <constraint firstItem="fTq-bP-Jws" firstAttribute="width" secondItem="XYf-HG-IRO" secondAttribute="width" id="dr7-Fu-JKF"/>
                                 </constraints>
                             </stackView>
@@ -53,16 +72,107 @@
                             <constraint firstItem="XYf-HG-IRO" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="rVq-03-aRP"/>
                         </constraints>
                     </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Guess the number" id="wMM-fR-va1">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="gear" catalog="system" id="1om-Lc-m2I">
+                            <connections>
+                                <segue destination="Yhb-su-N1w" kind="show" id="9c8-FK-McZ"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="rangeLabel" destination="dOX-t3-NmU" id="S5Z-yD-bga"/>
+                        <outlet property="stepsLabel" destination="jQA-eV-gL3" id="ZI2-uW-lMh"/>
                         <outlet property="textFieldForNumber" destination="aKo-vj-Wuv" id="JqJ-Ul-yut"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="944.92753623188412" y="93.75"/>
+        </scene>
+        <!--SettingsVC-->
+        <scene sceneID="MPj-h3-fNj">
+            <objects>
+                <viewController id="Yhb-su-N1w" customClass="SettingsVC" customModule="guessTheNumber" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="rMz-kv-HVO">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="93f-Td-DCO">
+                                <rect key="frame" x="107" y="108" width="200" height="148.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y4G-au-seU">
+                                        <rect key="frame" x="0.0" y="0.0" width="200" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Minimum Value" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eGx-l1-sp0">
+                                        <rect key="frame" x="0.0" y="50.5" width="200" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Maximum Value" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wmx-SY-lGv">
+                                        <rect key="frame" x="0.0" y="114.5" width="200" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="eGx-l1-sp0" firstAttribute="width" secondItem="93f-Td-DCO" secondAttribute="width" id="ndK-KP-En3"/>
+                                    <constraint firstAttribute="width" constant="200" id="nzu-17-DDk"/>
+                                    <constraint firstItem="y4G-au-seU" firstAttribute="width" secondItem="93f-Td-DCO" secondAttribute="width" id="pzb-ix-xSm"/>
+                                    <constraint firstItem="wmx-SY-lGv" firstAttribute="width" secondItem="93f-Td-DCO" secondAttribute="width" id="yAr-nv-kKR"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="f9T-BK-ukQ"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="93f-Td-DCO" firstAttribute="centerX" secondItem="rMz-kv-HVO" secondAttribute="centerX" id="3Ck-jj-u6w"/>
+                            <constraint firstItem="93f-Td-DCO" firstAttribute="top" secondItem="f9T-BK-ukQ" secondAttribute="top" constant="20" id="UgX-05-GQF"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="f5m-Be-enR">
+                        <barButtonItem key="rightBarButtonItem" title="Save" id="Jrj-Ty-Vgr">
+                            <connections>
+                                <segue destination="fJK-Ni-Bmg" kind="unwind" unwindAction="unwind:" id="UWc-4h-Bws"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="mainLabel" destination="y4G-au-seU" id="Peo-fG-uho"/>
+                        <outlet property="maximumValueTF" destination="wmx-SY-lGv" id="XJV-aH-izf"/>
+                        <outlet property="minimumValueTF" destination="eGx-l1-sp0" id="wz3-Ul-CXu"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0P4-dM-HvS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="fJK-Ni-Bmg" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="1754" y="94"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="DEi-6o-Nbk">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="UQZ-6E-IRS" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="axx-Wt-mXJ">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="UjE-FC-NvV"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="22L-C0-HdW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
             <point key="canvasLocation" x="34.782608695652179" y="93.75"/>
         </scene>
     </scenes>
     <resources>
+        <image name="gear" catalog="system" width="128" height="119"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
