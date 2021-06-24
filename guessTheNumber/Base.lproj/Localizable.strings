@@ -1,0 +1,17 @@
+/* 
+  Localizable.strings
+  guessTheNumber
+
+  Created by Артем Соколовский on 24.06.2021.
+  
+*/
+
+"Number of steps" = "Number of steps";
+"Range" = "Range";
+"Make a new number" = "Make a new number";
+"Error!" = "Error!";
+"Few" = "Few";
+"Many" = "Many";
+"Congrats!" = "Congrats!";
+"You're right" = "You're right";
+"Random Number" = "Random Number";

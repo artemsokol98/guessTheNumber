@@ -1,0 +1,36 @@
+
+/* Class = "UIBarButtonItem"; title = "Item"; ObjectID = "1om-Lc-m2I"; */
+"1om-Lc-m2I.title" = "Item";
+
+/* Class = "UIButton"; normalTitle = "New random number"; ObjectID = "AMY-Yz-a0L"; */
+"AMY-Yz-a0L.normalTitle" = "Новое случайное число";
+
+/* Class = "UIButton"; normalTitle = "Help"; ObjectID = "CB9-1e-S4O"; */
+"CB9-1e-S4O.normalTitle" = "Подсказка";
+
+/* Class = "UIBarButtonItem"; title = "Save"; ObjectID = "Jrj-Ty-Vgr"; */
+"Jrj-Ty-Vgr.title" = "Сохранить";
+
+/* Class = "UITextField"; placeholder = "Enter number"; ObjectID = "aKo-vj-Wuv"; */
+"aKo-vj-Wuv.placeholder" = "Введите число";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "dOX-t3-NmU"; */
+"dOX-t3-NmU.text" = "Label";
+
+/* Class = "UITextField"; placeholder = "Minimum Value"; ObjectID = "eGx-l1-sp0"; */
+"eGx-l1-sp0.placeholder" = "Минимальное значение";
+
+/* Class = "UIButton"; normalTitle = "Check!"; ObjectID = "fTq-bP-Jws"; */
+"fTq-bP-Jws.normalTitle" = "Проверить!";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "jQA-eV-gL3"; */
+"jQA-eV-gL3.text" = "Label";
+
+/* Class = "UINavigationItem"; title = "Guess the number"; ObjectID = "wMM-fR-va1"; */
+"wMM-fR-va1.title" = "Угадай число";
+
+/* Class = "UITextField"; placeholder = "Maximum Value"; ObjectID = "wmx-SY-lGv"; */
+"wmx-SY-lGv.placeholder" = "Максимальное число";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "y4G-au-seU"; */
+"y4G-au-seU.text" = "Label";
